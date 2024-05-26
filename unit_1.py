@@ -17,3 +17,9 @@ def print_shortest_names(filename):
 def create_name_length_file(input_filename, output_filename):
     with open(input_filename) as f_in, open(output_filename, 'w') as f_out:
         f_out.write('\n'.join(str(len(name.strip())) for name in f_in))
+
+
+def print_names_by_length(length, filename):
+    with open(filename) as f:
+        names = [name.strip() for name in f if len(name.strip()) == length]
+        print('\n'.join(names))
