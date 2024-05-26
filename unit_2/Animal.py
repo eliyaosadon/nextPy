@@ -5,12 +5,15 @@ class Animal:
         self.name_ = name
         self.hunger_ = hunger
 
+# gets the animal name
     def get_name(self):
         return self.name_
 
+# checks if the animal is hungry
     def is_hungry(self):
         return self.hunger_ > 0
 
+# feeds the animal
     def feed(self):
         if self.is_hungry():
             self.hunger_ -= 1
@@ -18,6 +21,7 @@ class Animal:
     def __str__(self):
         return 'Animal'
 
+# returns the specific sound of each animal
     def talk(self):
         pass
 
@@ -101,6 +105,7 @@ def main():
         Dragon("McFly", 80)
     ]
 
+# prints each animal name, kind, sound and song
     for animal in zoo_lst:
         print(f'{animal} {animal.get_name()}')
         while animal.is_hungry():
