@@ -48,13 +48,13 @@ def main():
     )
 
     # create a new image and draw a line from the first list of dots
-    # image background is the image "/next/06/image.jpg"
-    img = Image.open(str(Path.cwd()) + 'nextPy/unit_6/ex6p4.jpg')
+    # image background is the image "/image.jpg"
+    img = Image.open(str(Path.cwd()) + '/image.jpg')
     draw = ImageDraw.Draw(img)
-    draw.line(first, fill='black', width=2)
+    draw.line(first, fill='black', width=3)
 
     # draw a line from the second list of dots
-    draw.line(second, fill='black', width=2)
+    draw.line(second, fill='black', width=3)
 
     # save the image
     img.save('image.png')
