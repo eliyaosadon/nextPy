@@ -51,12 +51,16 @@ def main():
     # image background is the image "/image.jpg"
     img = Image.open(str(Path.cwd()) + '/image.jpg')
     draw = ImageDraw.Draw(img)
-    draw.line(first, fill='black', width=3)
 
-    # draw a line from the second list of dots
+    # Draw the cow's shape
+    draw.polygon(first, outline='black', fill='white')
+    draw.polygon(second, outline='black', fill='white')
+
+    # Draw lines connecting the dots
+    draw.line(first, fill='black', width=3)
     draw.line(second, fill='black', width=3)
 
-    # save the image
+    # Save the new image with the draw
     img.save('image.png')
     img.show()
 
